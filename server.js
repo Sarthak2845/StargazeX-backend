@@ -9,7 +9,7 @@ const eventRoutes = require('./routes/events');
 const newsRoutes = require('./routes/spacenews');
 const astronomyRoutes = require('./routes/astronomy');
 const telescopeRoutes = require('./routes/telescopes');
-
+const podRoutes = require('./routes/pod');
 const app = express();
 
 // Enhanced security with helmet
@@ -41,6 +41,7 @@ app.use('/api/events', eventRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/astronomy', astronomyRoutes);
 app.use('/api/telescopes', telescopeRoutes);
+app.use('/api/pod', podRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
